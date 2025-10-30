@@ -1,12 +1,15 @@
-# Program to swap two numbers without using a third variable
+#include <stdio.h>
 
-# Taking input from user
-a, b = map(int, input().split())
-
-# Swapping without a third variable
-a = a + b
-b = a - b
-a = a - b
-
-# Display the result
-print("After swap:", a, b)
+int main() {
+    int a, b;
+    
+    scanf("%d %d", &a, &b);
+    
+    a = a + b;
+    b = a - b;
+    a = a - b;
+  
+    printf("After swap: %d %d\n", a, b);
+    
+    return 0;
+}
