@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Invalid size\n");
+        return 1;
+    }
+
+    int *arr = malloc(n * sizeof(int));
+    if (!arr) {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
+    printf("Enter array elements:\n");
+    for (int i = 0; i < n; i++) {
+        if (scanf("%d", &arr[i]) != 1) {
+            printf("Invalid input\n");
+            free(arr);
+            return 1;
+        }
+    }
+
+    int k;
+    printf("Enter k: ");
+    if (scanf("%d", &k) != 1) {
+        printf("Invalid k\n");
+        free(arr);
+        return 1;
+    }
+
+    if (k <= 0 || k > n) {
+        printf("-1\n");
+        free(arr);
+        return 0;
+    }
+
+    int windows = n - k + 1;
+    int *deque = malloc(n * sizeof(int)); // store indices
+    if (!deque) {
+        printf("Memory allocation failed\n");
+        free(arr);
+        return 1;
+    }
+    int front = 0, back = 0; // deque is deque[front..back-1]
+
+    // Process first k elements
+    for (int i = 0; i < k; i++) {
+        // Remove elements smaller or equal to arr[i] from back
+        while (back > front && arr[deque[back - 1]] <= arr[i]) back--;
+        deque[back++] = i;
+    }
+
+    // For each window, output max and slide
+    for (int i = k; i < n; i++) {
+        // The element at front is the maximum for previous window
+        printf("%d", arr[deque[front]]);
+        if (i - k + 1 < windows) printf(" ");
+
+        // Remove indices which are out of this window (i-k+1 .. i)
+        while (back > front && deque[front] <= i - k) front++;
+
+        // Remove elements smaller or equal to arr[i] from back
+        while (back > front && arr[deque[back - 1]] <= arr[i]) back--;
+
+        deque[back++] = i;
+    }
+
+    // Print max for last window
+    printf("%d\n", arr[deque[front]]);
+
+    free(arr);
+    free(deque);
+    return 0;
+}
