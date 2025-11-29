@@ -1,3 +1,6 @@
+Q137 (Enum)
+//Create an enum for user roles (ADMIN, USER, GUEST) and display messages based on role.
+
 #include <stdio.h>
 
 enum Role {
