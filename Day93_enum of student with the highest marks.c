@@ -1,3 +1,5 @@
+Q143 (Enum)
+//Find and print the student with the highest marks.
 #include <stdio.h>
 
 struct Student {
