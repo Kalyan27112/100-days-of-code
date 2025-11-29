@@ -1,3 +1,6 @@
+Q139 (Enum)
+//Show that enums store integers by printing assigned values.
+
 #include <stdio.h>
 
 enum Example {
