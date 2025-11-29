@@ -1,5 +1,5 @@
-#include <stdio.h>
-
+Q38 (Loops without Arrays/Strings)
+//Write a program to find the sum of digits of a number.#include <stdio.h>
 int main() {
     int num, sum = 0, remainder;
 
