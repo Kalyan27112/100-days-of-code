@@ -1,4 +1,6 @@
-// employee_file_binary.c
+Q147 (Enum)
+//Store employee data in a binary file using fwrite() and read using fread().
+
 #include <stdio.h>
 
 struct Date {
