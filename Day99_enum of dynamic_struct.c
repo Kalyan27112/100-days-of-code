@@ -1,3 +1,5 @@
+Q149 (Enum)
+//Use malloc() to allocate structure memory dynamically and print details.
 #include <stdio.h>
 #include <stdlib.h>
 
