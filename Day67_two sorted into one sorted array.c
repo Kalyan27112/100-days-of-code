@@ -1,3 +1,7 @@
+Q117 (Logic Enhancers)
+//Write a program to take two sorted arrays of size m and n as input. Merge both the arrays such
+that the merged array is also sorted. Print the merged array.
+
 #include <stdio.h>
 
 int main() {
