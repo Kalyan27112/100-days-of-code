@@ -1,5 +1,5 @@
-#include <stdio.h>
-
+Q36 (Loops without Arrays/Strings)
+//Write a program to find the HCF (GCD) of two numbers.#include <stdio.h>
 int main() {
     int a, b, hcf;
 
