@@ -1,8 +1,7 @@
-Q112
-//Write a program to take an integer array arr as input. The task is to find the maximum sum of any
-contiguous subarray using Kadane's algorithm. Print the maximum sum as output. If all elements are
-negative, print the largest (least negative) element.
-
+Q111
+//Write a program to take an integer array arr and an integer k as inputs. The task is to find the 
+first negative integer in each subarray of size k moving from left to right. If no negative exists
+in a window, print "0" for that window. Print the results separated by spaces as output.
 #include <stdio.h>
 
 int main() {
