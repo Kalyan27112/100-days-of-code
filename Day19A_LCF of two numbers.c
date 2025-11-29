@@ -1,3 +1,5 @@
+Q37 (Loops without Arrays/Strings)
+//Write a program to find the LCM of two numbers.
 #include <stdio.h>
 
 int main() {
