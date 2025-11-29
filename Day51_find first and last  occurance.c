@@ -1,5 +1,9 @@
-#include <stdio.h>
+//Write a Program to take a sorted array (say nums[]) and an integer (say target) as inputs. The
+elements in the sorted array might be repeated. You need to print the first and last occurance
+of the target and print the index of first and last occurance.
+Print -1, -1 if the target is not present.
 
+#include <stdio.h>
 // Function to find first occurrence of target
 int firstOccurrence(int nums[], int n, int target) {
     int low = 0, high = n - 1, result = -1;
