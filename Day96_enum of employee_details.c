@@ -1,4 +1,6 @@
-// employee_details.c
+Q146 (Enum)
+//Create Employee structure with nested Date structure for joining date and print details.
+
 #include <stdio.h>
 
 struct Date {
