@@ -1,5 +1,5 @@
-Q143 (Enum)
-//Find and print the student with the highest marks.
+Q142 (Enum)
+//Store details of 5 students in an array of structures and print all.
 
 #include <stdio.h>
 
