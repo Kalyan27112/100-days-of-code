@@ -1,3 +1,5 @@
+Q43 (Loops without Arrays/Strings)
+//Write a program to check if a number is a strong number.
 #include <stdio.h>
 
 // Function to calculate factorial of a digit
